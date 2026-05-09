@@ -17,7 +17,6 @@ class Assessment extends Component {
     selectedNumberedQuestionIndex: 0,
     currentQuestionIndex: 0,
     answeredQuestionsCount: 0,
-    unansweredQuestionsCount: 0,
     isClickedQuestionNumber: false,
     isCorrectOptionClicked: false,
     isAnyOptionClicked: false,
@@ -229,8 +228,6 @@ class Assessment extends Component {
       assessmentQuestion,
       currentQuestionIndex,
       isCorrectOptionClicked,
-      isAnyOptionClicked,
-      answeredQuestionsCount,
       selectedOption,
     } = this.state
 
@@ -281,11 +278,11 @@ class Assessment extends Component {
     //     isAnyOptionClicked: false,
     //   }))
     // }
-    this.setState(prevState => ({
+    this.setState({
       //   score: isCorrectOptionClicked ? prevState.score + 1 : prevState.score,
       isAnyOptionClicked: false,
       isCorrectOptionClicked: false,
-    }))
+    })
   }
 
   renderAssessmentSummary = () => {
